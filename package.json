@@ -1,0 +1,59 @@
+{
+  "name": "amazing-electron-ipc-router",
+  "version": "1.0.0",
+  "description": "Small Electron IPC router, which implements request-response pattern",
+  "scripts": {
+    "lint": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.amazingcat.net:AmazingTime/amazing-electron-ipc-router.git"
+  },
+  "keywords": [
+    "router",
+    "electron",
+    "ipc"
+  ],
+  "author": "amazingcat LLC Team <to@amazingcat.net>",
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "^3.3.2"
+  },
+  "xo": {
+		"env": [
+			"browser",
+			"node"
+		],
+		"space": true,
+		"rules": {
+			"no-multiple-empty-lines": [
+				"error",
+				{
+					"max": 2,
+					"maxEOF": 1
+				}
+			],
+			"max-statements-per-line": [
+				"error",
+				{
+					"max": 2
+				}
+			],
+			"padded-blocks": [
+				"error",
+				"always"
+			],
+			"object-curly-spacing": [
+				"error",
+				"always"
+			],
+			"curly": [
+				"error",
+				"multi"
+			]
+		}
+	},
+  "devDependencies": {
+    "xo": "^0.24.0"
+  }
+}

@@ -1,0 +1,20 @@
+image:
+  name: node:current-alpine
+
+stages:
+- check
+
+cache:
+  paths:
+  - .npm
+
+lint:
+  stage: check
+  script:
+  - npm ci
+  - npm run lint
+
+vuln-audit:
+  stage: check
+  script:
+  - npm audit
