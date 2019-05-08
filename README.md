@@ -177,7 +177,7 @@ ipc.serve('test', request => { ... }, true);  // => true, потому что ov
 **Пример:**
 ```javascript
 ipc.emit('test', { test: '1234' });  // => true, присутствуют данные в теле запроса
-ipc.serve('test', {});               // => true, тело запроса пустое
+ipc.emit('test', {});               // => true, тело запроса пустое
 ipc.emit('test');                    // => throws Error, т.к. тело запроса явно не указано
 ```
 
