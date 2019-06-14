@@ -24,7 +24,10 @@ const { ipcMain } = require('electron');
 
 // Подгружаем наш IPCRouter и создаём его инстанс
 const IPCRouter = require('amazing-electron-ipc-router');
-const ipc = new IPCRouter(ipcMain);
+
+// Второй аргумент не обязателен - при его отсутствии будет присовен идентификатор по умолчанию
+// Для обращения к нему, в эндпоинтах следует не указывать routerId
+const ipc = new IPCRouter(ipcMain, 'sampleRouterId');
 
 // Устанавливаем хэндлер для эндпойнта
 // Стоит отметить, что функция обработчика может так же быть AsyncFunction или Promise (что, в целом, одно и то же)
@@ -42,13 +45,13 @@ ipc.serve('misc/say-hi', request => {
 // Это пример функции, выполняющей запрос, который ожидает что-то получить в ответ
 const sendCatFace = async () => {
 
-    const result = await ipc.request('catface', { catface: '(,,◕　⋏　◕,,)' })
+    const result = await ipc.request('catface:sampleRouterId', { catface: '(,,◕　⋏　◕,,)' })
     console.log(result.body.message); // выведет: Thank you for this pretty catface!
 
 };
 
 // А вот так можно сделать запрос, который не ожидает ничего получить в ответ
-ipc.emit('playback/control', { action: 'NextSong' });
+ipc.emit('playback/control:sampleRouterId', { action: 'NextSong' });
 ```
 
 **Renderer-процесс**
@@ -58,7 +61,10 @@ const { ipcRenderer } = require('electron');
 
 // Подгружаем наш IPC и создаём его инстанс
 const IPCRouter = require('amazing-electron-ipc-router');
-const ipc = new IPCRouter(ipcRenderer);
+
+// Второй аргумент не обязателен - при его отсутствии будет присовен идентификатор по умолчанию
+// Для обращения к нему, в эндпоинтах следует не указывать routerId
+const ipc = new IPCRouter(ipcRenderer, 'sampleRouterId');
 
 // Обслуживаем эндпойнт, который принимаешь кошачьи морды с main-процесса
 ipc.serve('catface', request => {
@@ -74,7 +80,7 @@ ipc.serve('catface', request => {
 // Функция, тыркающая эндпойнт в main-процессе
 const sayHi = async name => {
 
-    const result = await ipc.request('misc/say-hi', { name: 'Mark' })
+    const result = await ipc.request('misc/say-hi:sampleRouterId', { name: 'Mark' })
     console.log(result.body); // выведет: Hello, Mark!
 
 };
