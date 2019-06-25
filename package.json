@@ -1,25 +1,28 @@
 {
-  "name": "amazing-electron-ipc-router",
-  "version": "1.0.0",
-  "description": "Small Electron IPC router, which implements request-response pattern",
-  "scripts": {
-    "lint": "xo"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@git.amazingcat.net:AmazingTime/amazing-electron-ipc-router.git"
-  },
-  "keywords": [
-    "router",
-    "electron",
-    "ipc"
-  ],
-  "author": "amazingcat LLC Team <to@amazingcat.net>",
-  "license": "MIT",
-  "dependencies": {
-    "uuid": "^3.3.2"
-  },
-  "xo": {
+	"name": "@amazingcat/electron-ipc-router",
+	"version": "1.1.0",
+	"description": "Small Electron IPC router, which implements request-response pattern",
+	"scripts": {
+		"test": "xo"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@git.amazingcat.net:AmazingTime/amazing-electron-ipc-router.git"
+	},
+	"publishConfig": {
+		"registry": "https://node-registry.amazingcat.net/"
+	},
+	"keywords": [
+		"router",
+		"electron",
+		"ipc"
+	],
+	"author": "amazingcat LLC Team <to@amazingcat.net>",
+	"license": "MIT",
+	"dependencies": {
+		"uuid": "^3.3.2"
+	},
+	"xo": {
 		"env": [
 			"browser",
 			"node"
@@ -53,7 +56,7 @@
 			]
 		}
 	},
-  "devDependencies": {
-    "xo": "^0.24.0"
-  }
+	"devDependencies": {
+		"xo": "^0.24.0"
+	}
 }
