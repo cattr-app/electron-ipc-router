@@ -1,20 +1,28 @@
-image:
-  name: node:current-alpine
+# Use current version of Node.js
+image: node:current-alpine
 
-stages:
-- check
+# Install dependencies
+before_script:
+  - npm install
 
+# Cache dependencies in between jobs
 cache:
+  key: ${CI_COMMIT_REF_SLUG}
   paths:
-  - .npm
+  - node_modules/
 
-lint:
-  stage: check
+# Run tests
+test:
+  stage: test
   script:
-  - npm ci
-  - npm run lint
+    - npm run test
 
-vuln-audit:
-  stage: check
+# Publish to package registry (this job may fail in case of same package version as one already in registry)
+publish:
+  stage: deploy
+  allow_failure: true
   script:
-  - npm audit
+    - cat $CI_NPMRC > .npmrc
+    - npm publish
+  only:
+    - release
