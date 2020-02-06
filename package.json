@@ -1,6 +1,6 @@
 {
 	"name": "@amazingcat/electron-ipc-router",
-	"version": "1.2.1.experimental",
+	"version": "1.2.1-experimental",
 	"description": "Small Electron IPC router, which implements request-response pattern",
 	"scripts": {
 		"test": "xo"
