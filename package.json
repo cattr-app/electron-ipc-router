@@ -1,0 +1,57 @@
+{
+	"name": "@amazingcat/electron-ipc-router",
+	"version": "1.2.2",
+	"description": "Simple Electron IPC router",
+	"scripts": {
+		"test": "xo"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cattr-app/electron-ipc-router.git"
+	},
+	"keywords": [
+		"router", "electron", "ipc", "cattr"
+	],
+	"author": "Cattr Team & Contributors <hi@cattr.app>",
+	"license": "OSL-3.0",
+	"dependencies": {
+		"uuid": "^3.3.2"
+	},
+	"xo": {
+		"env": [
+			"browser",
+			"node"
+		],
+		"space": true,
+		"rules": {
+			"no-multiple-empty-lines": [
+				"error",
+				{
+					"max": 2,
+					"maxEOF": 1
+				}
+			],
+			"max-statements-per-line": [
+				"error",
+				{
+					"max": 2
+				}
+			],
+			"padded-blocks": [
+				"error",
+				"always"
+			],
+			"object-curly-spacing": [
+				"error",
+				"always"
+			],
+			"curly": [
+				"error",
+				"multi"
+			]
+		}
+	},
+	"devDependencies": {
+		"xo": "^0.24.0"
+	}
+}
