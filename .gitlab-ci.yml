@@ -16,13 +16,3 @@ test:
   stage: test
   script:
     - npm run test
-
-# Publish to package registry (this job may fail in case of same package version as one already in registry)
-publish:
-  stage: deploy
-  allow_failure: true
-  script:
-    - cat $CI_NPMRC > .npmrc
-    - npm publish
-  only:
-    - release

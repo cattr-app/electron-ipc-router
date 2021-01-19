@@ -1,6 +1,6 @@
 {
 	"name": "@amazingcat/electron-ipc-router",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"description": "Small Electron IPC router, which implements request-response pattern",
 	"scripts": {
 		"test": "xo"
@@ -8,9 +8,6 @@
 	"repository": {
 		"type": "git",
 		"url": "git@git.amazingcat.net:AmazingTime/amazing-electron-ipc-router.git"
-	},
-	"publishConfig": {
-		"registry": "https://node-registry.amazingcat.net/"
 	},
 	"keywords": [
 		"router",
