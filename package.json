@@ -1,6 +1,6 @@
 {
 	"name": "@amazingcat/electron-ipc-router",
-	"version": "1.2.1-experimental.1",
+	"version": "1.2.2",
 	"description": "Small Electron IPC router, which implements request-response pattern",
 	"scripts": {
 		"test": "xo"
@@ -20,7 +20,7 @@
 	"author": "amazingcat LLC Team <to@amazingcat.net>",
 	"license": "MIT",
 	"dependencies": {
-		"uuid": "^3.3.2"
+		"uuid": "^8.3.2"
 	},
 	"xo": {
 		"env": [
@@ -57,6 +57,6 @@
 		}
 	},
 	"devDependencies": {
-		"xo": "^0.24.0"
+		"xo": "^0.37.1"
 	}
 }
