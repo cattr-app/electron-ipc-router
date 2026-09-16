@@ -1,14 +1,11 @@
 {
 	"name": "@amazingcat/electron-ipc-router",
-	"version": "1.3.0",
+	"version": "dev",
 	"description": "Small Electron IPC router, which implements request-response pattern",
 	"scripts": {
 		"test": "eslint ."
 	},
-	"repository": {
-		"type": "git",
-		"url": "git@git.amazingcat.net:AmazingTime/amazing-electron-ipc-router.git"
-	},
+	"repository": "github:cattr-app/electron-ipc-router",
 	"keywords": [
 		"router",
 		"electron",
@@ -23,5 +20,12 @@
 		"eslint": "^7.24.0",
 		"eslint-config-airbnb": "^18.2.1",
 		"eslint-plugin-import": "^2.22.1"
-	}
+	},
+	"engines": {
+		"node": "~24.21"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"packageManager": "npm@12.0.2+sha512.b885e890b9418fa1693544d05f53e64f9a73ec194837d4258b15fecdd692347b1dd2a517b1b0cbaf9d31cd8e92c3b70956bd2ecc72833a57b4b3098f5bfa7943"
 }

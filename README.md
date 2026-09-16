@@ -1,19 +1,6 @@
 # Amazing Electron IPC Router
 Простой роутер, реализующий request-response паттерн при работе с Electron IPC.
 
-## Установка и зависимости
-Так как он пока ещё не выложен в репозитории пакетного менеджера, то установка происходит через указание репозитория в Git. Идём в `package.json`, и в секцию `dependencies` прописываем следующее
-```javascript
-// Если работа с гитом осуществляется через SSH
-"amazing-electron-ipc-router": "git+ssh://git@git.amazingcat.net:AmazingTime/amazing-electron-ipc-router.git"
-
-// .. или, если работаем через HTTPS
-"amazing-electron-ipc-router": "git+https://git@git.amazingcat.net/AmazingTime/amazing-electron-ipc-router.git"
-```
-
-После этого делаем `npm install` и всё хорошо.
-Данный модуль содержит у себя в зависимостях пакет [uuid](https://www.npmjs.com/package/uuid).
-
 ## Простые примеры
 Простой пример работы с IPC-роутером для общего понимания.
 
