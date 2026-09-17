@@ -1,4 +1,9 @@
 # Amazing Electron IPC Router
+
+[![node](https://img.shields.io/node/v/@amazingcat/electron-ipc-router.svg)](https://www.npmjs.com/package/@amazingcat/electron-ipc-router)
+[![npm](https://img.shields.io/badge/npm-9.9.4-blue.svg)](https://www.npmjs.com/package/@amazingcat/electron-ipc-router)
+
+
 Простой роутер, реализующий request-response паттерн при работе с Electron IPC.
 
 ## Простые примеры
